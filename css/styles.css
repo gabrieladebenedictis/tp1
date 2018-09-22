@@ -1,3 +1,7 @@
+body {
+  margin: 0%;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -8,12 +12,13 @@ header h1 {
   color: #FA7855;
 }
 header nav {
-  width: 40%;
+  width: 42%;
 }
 
 ul {
   display: flex;
   list-style: none;
+  padding: 0px;
   justify-content: space-between;
 }
 ul li {
@@ -24,24 +29,58 @@ ul li:hover {
   color: #FA7855;
   cursor: pointer;
 }
-ul li:first-of-type {
+ul li .dropdown {
+  position: relative;
+  display: inline-block;
+}
+ul li:hover .hide {
+  display: block;
+}
+ul li a {
+  text-decoration: none;
   color: #FA7855;
 }
 ul li .hide {
   display: none;
   position: absolute;
+  background-color: white;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
 }
-ul li .dropdown {
-  position: relative;
-  display: inline-block;
+
+.carrousel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px 10px 0px;
 }
 
-.dropdown:hover .hide {
-  display: block;
+.image-container {
+  position: relative;
+  width: 24%;
+}
+.image-container img {
+  width: 100%;
+}
+.image-container div {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 22%;
+  background-color: rgba(255, 93, 53, 0.5);
+}
+.image-container div p {
+  margin: 10px 8px 0px 8px;
+  text-align: justify;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+}
+.image-container div p:first-of-type {
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */
