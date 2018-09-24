@@ -112,4 +112,58 @@ ul {
     .carrousel {
         display: none;
     }
+
+// PAULINA
+
+.receta {
+    margin-left: 10%;
+    padding: 30px 0;
+    width: 52%;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    .img-container {
+        width: 45%;
+        img {
+            width: 100%;
+            border-radius: 45px;
+        }
+    }
+    .post-recetas-container {
+        width: 50%;
+    }
+}
+
+.post-recetas-container {
+    font-family: "IBM Plex Mono", monospace;
+    h4 {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin: 15px 0 0 15px;
+    }
+    p   {
+        color: grey;
+        font-size: 12px;
+    }
+    .leer-mas {
+        width: 25%;
+        text-align: center;
+        font-weight: bold;
+        padding: 6px 18px;
+        border-radius: 9px;
+        font-size: 11px;
+        background-color: #fde2da;
+        margin: 40px 0;
+        &:hover {
+            background-color: #fa7855;
+            cursor: pointer;
+        }
+    }
+}
+
+.post-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: gray;
 }
