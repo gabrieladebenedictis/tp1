@@ -9,8 +9,11 @@ header {
     font-family: "Indie Flower", cursive;
     color: #FA7855;
     }
-    nav {
+    .desktop-menu {
         width: 42%;
+    }
+    .mobile-menu {
+        display: none;
     }
 }
 ul {
@@ -47,39 +50,66 @@ ul {
         }
     }
 }
+.heroe-img {
+    display: none;
+}
 .carrousel {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 10px 0px 10px 0px;
+    margin: 0;
+    // TIENE QUE LLEVAR MARGIN: 0; SI NO, SE ROMPEEE
 }
 .image-container {
     position: relative;
     width: 24%;
+// Para que cuando se haga hover -al contenedor de la imagen- 
+// la altura del contenedor del texto sea diferente:
+    &:hover {
+        cursor: pointer;
+        div {
+            height: 22%;
+        }
+    }
     img {
         width: 100%;
     }
     div {
+// Necesita position absolute para que se situe en una posición de acuerdo a
+// donde está la imagen (en este caso, bottom: 0; para que esté a partir del bottom de la imagen)
+// Al igual que un z index mayor al de la imagen:
         position: absolute;
         bottom: 0;
-        z-index: 2;
+        z-index: 1;
         width: 100%;
-        height: 22%;
-        background-color: rgba(255, 93, 53, 0.5);
+        background-color: rgba(255, 93, 53, 0.7);
+// Hay que ponerle un height de "0" antes del estado de hover:
+        height: 0%;
+// Propiedad que permite la transicion de height (o width) 
+// y el tiempo que toma la transicion:
+        transition: height 0.8s;
         p {
-        margin: 10px 8px 0px 8px;
-        text-align: justify;
+        margin: 10px 20px 0px 20px;
         color: white;
         font-family: "IBM Plex Mono", monospace;
         font-size: 14px;
         &:first-of-type {
             font-size: 10px;
-            // margin-top: 10px;
         }
         } 
     }
-    // &:hover {
-    //     display: inline-block;
-    //     cursor: pointer;
-    // }
+}
+@media (max-width: 790px) {
+    .desktop-menu {
+        display: none;
+    }
+    .heroe-img {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    .carrousel {
+        display: none;
+    }
 }

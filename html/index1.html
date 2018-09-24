@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
@@ -13,7 +14,15 @@
 <body>
     <header>
         <h1>MI BLOG DE COCINA</h1>
-        <nav>
+        <nav class="mobile-menu">
+            <ul class="dropdown-mobile">
+                <li>HOME</li>
+                <li>PLATOS</li>
+                <li>SOBRE MI</li>
+                <li>CONTACTO</li>
+            </ul>
+        </nav>
+        <nav class="desktop-menu">
             <ul>
                 <li><a href="html/index1.html">HOME</a></li>
                 <li class="dropdown">PLATOS <i class="fas fa-sort-down"></i>
@@ -29,6 +38,9 @@
         </nav>
     </header>
     <main>
+        <section class="heroe-img">
+            <img src="../img/img-1.jpg"/>
+        </section>
         <section class="carrousel">
             <div class="image-container">
                 <img src="../img/img-1.jpg">
@@ -55,7 +67,7 @@
                 <img src="../img/img-4.jpg">
                 <div>
                     <p>Mayo 20, 2018 | 5 comentarios</p>
-                    <p>"Los mejores tacos que probarás en tu vida"</p>
+                    <p>"Lo mejor de la dieta mediterránea"</p>
                 </div>
             </div>
         </section> 

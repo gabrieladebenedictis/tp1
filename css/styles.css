@@ -11,8 +11,11 @@ header h1 {
   font-family: "Indie Flower", cursive;
   color: #FA7855;
 }
-header nav {
+header .desktop-menu {
   width: 42%;
+}
+header .mobile-menu {
+  display: none;
 }
 
 ul {
@@ -50,16 +53,26 @@ ul li .hide {
   z-index: 1;
 }
 
+.heroe-img {
+  display: none;
+}
+
 .carrousel {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 10px 0px 10px 0px;
+  margin: 0;
 }
 
 .image-container {
   position: relative;
   width: 24%;
+}
+.image-container:hover {
+  cursor: pointer;
+}
+.image-container:hover div {
+  height: 22%;
 }
 .image-container img {
   width: 100%;
@@ -67,20 +80,33 @@ ul li .hide {
 .image-container div {
   position: absolute;
   bottom: 0;
-  z-index: 2;
+  z-index: 1;
   width: 100%;
-  height: 22%;
-  background-color: rgba(255, 93, 53, 0.5);
+  background-color: rgba(255, 93, 53, 0.7);
+  height: 0%;
+  transition: height 0.8s;
 }
 .image-container div p {
-  margin: 10px 8px 0px 8px;
-  text-align: justify;
+  margin: 10px 20px 0px 20px;
   color: white;
   font-family: "IBM Plex Mono", monospace;
   font-size: 14px;
 }
 .image-container div p:first-of-type {
   font-size: 10px;
+}
+
+@media (max-width: 790px) {
+  .heroe-img {
+    display: block;
+  }
+  .heroe-img img {
+    width: 100%;
+  }
+
+  .carrousel {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
