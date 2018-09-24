@@ -112,18 +112,20 @@ ul {
     .carrousel {
         display: none;
     }
-
+}
 // PAULINA
 
 .receta {
     margin-left: 10%;
     padding: 30px 0;
-    width: 52%;
+    width: 50%;
     border-top: 1px solid lightgray;
     display: flex;
     justify-content: space-between;
     .img-container {
         width: 45%;
+        display: flex;
+        align-items: center;
         img {
             width: 100%;
             border-radius: 45px;
@@ -134,11 +136,24 @@ ul {
     }
 }
 
+.post-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: gray;
+    text-align: center;
+    .feedback {
+        span {
+            padding-right: 6px;
+        }
+    }
+}
+
 .post-recetas-container {
     font-family: "IBM Plex Mono", monospace;
     h4 {
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 18px;
         margin: 15px 0 0 15px;
     }
     p   {
@@ -153,7 +168,9 @@ ul {
         border-radius: 9px;
         font-size: 11px;
         background-color: #fde2da;
-        margin: 40px 0;
+        margin: 40px 0 0 0;
+        transition: background-color 0.3s ease-in-out;
+    // transicion de background-color en el hover
         &:hover {
             background-color: #fa7855;
             cursor: pointer;
@@ -161,9 +178,52 @@ ul {
     }
 }
 
-.post-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: gray;
+@media (max-width: 790px) {
+    .receta {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .receta {
+        display: none;
+        width: 100%;
+        margin: 0;
+        border-top: none;
+        .img-container {
+            display: none;
+        }
+        .post-recetas-container {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            .leer-mas {
+                margin: 0 auto;
+                width:30%;
+            }
+        }
+        &:first-of-type {
+            display: block;
+        }
+    }    
+}
+
+// RECETAS.HTML
+
+.banner {
+    img {
+        width: 100%;
+    }
+}
+
+.post-receta {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid black;
+    .img-container {
+        img {
+            width: 100%;
+        }
+    }
 }
