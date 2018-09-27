@@ -83,6 +83,7 @@ ul li .hide {
   z-index: 1;
   width: 100%;
   background-color: rgba(255, 93, 53, 0.7);
+  overflow: hidden;
   height: 0%;
   transition: height 0.8s;
 }
@@ -96,8 +97,11 @@ ul li .hide {
   font-size: 10px;
 }
 
-<<<<<<< HEAD
 @media (max-width: 790px) {
+  .desktop-menu {
+    display: none;
+  }
+
   .heroe-img {
     display: block;
   }
@@ -108,7 +112,35 @@ ul li .hide {
   .carrousel {
     display: none;
   }
-=======
+
+  header .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40px;
+    background-color: #FA7855;
+    border-radius: 30px;
+    position: relative;
+    color: white;
+  }
+  header .mobile-menu:hover .dropdown-mobile {
+    display: block;
+  }
+}
+.dropdown-mobile {
+  display: none;
+  width: 50%;
+  position: absolute;
+  top: 100%;
+  background-color: #FA7855;
+  min-width: 160px;
+  padding: 12px 16px;
+  z-index: 1;
+  color: white;
+}
+
 .receta {
   margin-left: 10%;
   padding: 30px 0;
@@ -160,7 +192,6 @@ ul li .hide {
   justify-content: space-between;
   font-size: 13px;
   color: gray;
->>>>>>> 702f0f72f0168f8b51959248908f908a0a3cacb1
 }
 
 /*# sourceMappingURL=styles.css.map */
