@@ -112,6 +112,7 @@ ul li .hide {
   .carrousel {
     display: none;
   }
+<<<<<<< HEAD
 
   header .mobile-menu {
     display: flex;
@@ -141,6 +142,9 @@ ul li .hide {
   color: white;
 }
 
+=======
+}
+>>>>>>> dcedb350e0b29081658d7b0c83c7e7b0c8308b9c
 .receta {
   margin-left: 10%;
   padding: 30px 0;
@@ -192,6 +196,142 @@ ul li .hide {
   justify-content: space-between;
   font-size: 13px;
   color: gray;
+<<<<<<< HEAD
+=======
+}
+
+.imagenes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image2:hover {
+  cursor: pointer;
+}
+.image2:hover p {
+  background-color: #fc784f;
+}
+
+.imagenes img {
+  width: 250px;
+  height: auto;
+  border-radius: 20%;
+}
+
+.tipos {
+  width: 50%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  line-height: 30px;
+  border-radius: 20px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  background-color: white;
+  position: relative;
+  bottom: 90px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer .redes-sociales {
+  width: 70%;
+  font-family: "IBM Plex Mono", monospace;
+  color: grey;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 2px solid grey;
+  margin-bottom: 10px;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+.facebook {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.facebook:hover {
+  cursor: pointer;
+  color: #3b5998;
+}
+.facebook p {
+  margin-left: 7px;
+}
+
+.twitter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.twitter:hover {
+  cursor: pointer;
+  color: #55acee;
+}
+.twitter p {
+  margin-left: 7px;
+}
+
+.google {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.google:hover {
+  cursor: pointer;
+  color: #dd4b39;
+}
+.google p {
+  margin-left: 7px;
+}
+
+.linkedin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.linkedin:hover {
+  cursor: pointer;
+  color: #007bb5;
+}
+.linkedin p {
+  margin-left: 7px;
+}
+
+.instagram {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.instagram:hover {
+  cursor: pointer;
+  color: #8f6247;
+}
+.instagram p {
+  margin-left: 7px;
+}
+
+.youtube {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.youtube:hover {
+  cursor: pointer;
+  color: #ff0000;
+}
+.youtube p {
+  margin-left: 7px;
+>>>>>>> dcedb350e0b29081658d7b0c83c7e7b0c8308b9c
 }
 
 /*# sourceMappingURL=styles.css.map */
