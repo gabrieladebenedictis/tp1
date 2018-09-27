@@ -18,32 +18,32 @@ header .mobile-menu {
   display: none;
 }
 
-ul {
+header ul {
   display: flex;
   list-style: none;
   padding: 0px;
   justify-content: space-between;
 }
-ul li {
+header ul li {
   font-family: "IBM Plex Mono", monospace;
   color: gray;
 }
-ul li:hover {
+header ul li:hover {
   color: #FA7855;
   cursor: pointer;
 }
-ul li .dropdown {
+header ul li .dropdown {
   position: relative;
   display: inline-block;
 }
-ul li:hover .hide {
+header ul li:hover .hide {
   display: block;
 }
-ul li a {
+header ul li a {
   text-decoration: none;
   color: #FA7855;
 }
-ul li .hide {
+header ul li .hide {
   display: none;
   position: absolute;
   background-color: white;
@@ -136,7 +136,7 @@ ul li .hide {
 .post-info {
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 11px;
   color: gray;
   text-align: center;
 }
@@ -167,8 +167,12 @@ ul li .hide {
   margin: 40px 0 0 0;
   transition: background-color 0.3s ease-in-out;
 }
+.post-recetas-container .leer-mas a {
+  text-decoration: none;
+  color: black;
+}
 .post-recetas-container .leer-mas:hover {
-  background-color: #fa7855;
+  background-color: #fc784f;
   cursor: pointer;
 }
 
@@ -200,18 +204,6 @@ ul li .hide {
   .receta:first-of-type {
     display: block;
   }
-}
-.banner img {
-  width: 100%;
-}
-
-.post-receta {
-  width: 50%;
-  margin: 0 auto;
-  border: 1px solid black;
-}
-.post-receta .img-container img {
-  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

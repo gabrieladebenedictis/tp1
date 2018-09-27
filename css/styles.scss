@@ -16,7 +16,7 @@ header {
         display: none;
     }
 }
-ul {
+ header ul {
     display: flex;
     list-style: none;
     padding: 0px;
@@ -139,7 +139,7 @@ ul {
 .post-info {
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
+    font-size: 11px;
     color: gray;
     text-align: center;
     .feedback {
@@ -169,10 +169,14 @@ ul {
         font-size: 11px;
         background-color: #fde2da;
         margin: 40px 0 0 0;
+        a {
+            text-decoration: none;
+            color: black;
+        }
         transition: background-color 0.3s ease-in-out;
     // transicion de background-color en el hover
         &:hover {
-            background-color: #fa7855;
+            background-color: #fc784f;
             cursor: pointer;
         }
     }
@@ -207,23 +211,4 @@ ul {
             display: block;
         }
     }    
-}
-
-// RECETAS.HTML
-
-.banner {
-    img {
-        width: 100%;
-    }
-}
-
-.post-receta {
-    width: 50%;
-    margin: 0 auto;
-    border: 1px solid black;
-    .img-container {
-        img {
-            width: 100%;
-        }
-    }
 }
