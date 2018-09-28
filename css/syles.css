@@ -83,52 +83,35 @@ ul li .hide {
   font-size: 10px;
 }
 
-.profile {
+.gabi {
+  padding: 30px;
   display: flex;
-  justify-content: space-around;
-  width: 80%;
-  margin: auto;
 }
-
-.contenedor-video {
-  width: 50%;
+.gabi .contenedor-video {
+  width: 70%;
+}
+.gabi .contenedor-video iframe {
+  width: 100%;
   height: 500px;
 }
-.contenedor-video iframe {
-  width: 100%;
-  height: 100%;
+.gabi .contenedor-perfil {
+  width: 551px;
+  padding: 0 20px;
 }
-.contenedor-video figcaption {
-  color: grey;
-}
-
-.contenedor-profile {
-  width: 23%;
-  display: flex;
+.gabi .contenedor-perfil p {
+  width: 50%;
+  font-size: 20px;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  font-family: "IBM Plex Mono", monospace;
+  height: 190px;
 }
-.contenedor-profile .rosa {
-  width: 100%;
-  height: 50px;
+.gabi .contenedor-perfil h2,
+.gabi .contenedor-perfil h4 {
   background-color: #fde2da;
-  font-size: 15px;
+  font-size: 20px;
   margin: 0;
-  text-align: center;
 }
-.contenedor-profile .rosa h2 {
-  font-size: 18px;
-}
-.contenedor-profile .img-round {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.contenedor-profile .img-round img {
+.gabi .contenedor-perfil .foto-perfil {
   border-radius: 50%;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=syles.css.map */
