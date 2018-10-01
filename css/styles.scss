@@ -1,70 +1,194 @@
 body {
-    margin: 0%;
+  margin: 0%;
 }
+//HEADER: TODAS
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     h1 {
-    font-family: "Indie Flower", cursive;
-    color: #FA7855;
+        font-family: "Indie Flower", cursive;
+        color: #FA7855;
     }
     .desktop-menu {
         width: 42%;
+        display: block;
     }
+    // MENU MOBILE: MARIA
     .mobile-menu {
         display: none;
+        position: relative;
+        width: 80%;
+        height: 40px;
+        background-color: #FA7855;
+        border-radius: 30px;
+        color: white;
+        font-family: "IBM Plex Mono", monospace;
+        &:hover .dropdown-mobile {
+            display: block;
+        }
+        span, i {
+            color: black;
+        }
+        .dropdown-mobile {
+            display: none;
+            position: absolute;
+            top: 40px;
+            min-width: 160px;
+            z-index: 1;
+            list-style: none;
+            text-align: center;
+            margin: 0px;
+            padding: 0%;
+            background-color: #FA7855;
+        }
     }
 }
- header ul {
+// MENU DESKTOP: TODAS
+.main-list {
     display: flex;
     list-style: none;
     padding: 0px;
-    justify-content: space-between; 
-    li {
-        font-family: "IBM Plex Mono", monospace;
-        color: gray;
-    &:hover {
+    justify-content: space-between;
+    font-family: "IBM Plex Mono", monospace;
+    color: gray;
+    li:hover {
         color: #FA7855;
         cursor: pointer;
+    }
+    a {
+        text-decoration: none; 
+        color: #FA7855;             
     }
     .dropdown {
         position: relative;
         display: inline-block;
-    } 
-    &:hover .hide {
-        display: block;
-    } 
-        a {
-            text-decoration: none; 
-            color: #FA7855;           
-        }  
+        &:hover .hide {
+            display: block;
+        }
         .hide {
             display: none;
             position: absolute;
             background-color: white;
+            color: gray;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             padding: 12px 16px;
             z-index: 1;
+            list-style: none;
         }
     }
+    &:hover .hide {
+      display: block;
+    }
+    a {
+      text-decoration: none;
+      color: #fa7855;
+    }
+    .hide {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
 }
+
+// CARROUSEL: MARIA
 .heroe-img {
     display: none;
 }
 .carrousel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px 10px 0px;
+}
+.image-container {
+  position: relative;
+  width: 24%;
+  img {
+    width: 100%;
+  }
+  div {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 22%;
+    background-color: rgba(255, 93, 53, 0.5);
+    p {
+      margin: 10px 8px 0px 8px;
+      text-align: justify;
+      color: white;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 14px;
+      &:first-of-type {
+        font-size: 10px;
+        // margin-top: 10px;
+      }
+    }
+  }
+  // &:hover {
+  //     display: inline-block;
+  //     cursor: pointer;
+  // }
+}
+.profile {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+.contenedor-video {
+  width: 50%;
+  height: 500px;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+  figcaption {
+    color: grey;
+  }
+}
+.contenedor-profile {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "IBM Plex Mono", monospace;
+  .rosa {
+    width: 100%;
+    height: 50px;
+    background-color: #fde2da;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .img-round {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin: 0;
-    // TIENE QUE LLEVAR MARGIN: 0; SI NO, SE ROMPEEE
+    flex-direction: column;
+    align-items: center;
+    img {
+      border-radius: 50%;
+    }
+  }
 }
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 0;
+// }
 .image-container {
     position: relative;
     width: 24%;
-// Para que cuando se haga hover -al contenedor de la imagen- 
-// la altura del contenedor del texto sea diferente:
     &:hover {
         cursor: pointer;
         div {
@@ -75,22 +199,16 @@ header {
         width: 100%;
     }
     div {
-// Necesita position absolute para que se situe en una posición de acuerdo a
-// donde está la imagen (en este caso, bottom: 0; para que esté a partir del bottom de la imagen)
-// Al igual que un z index mayor al de la imagen:
         position: absolute;
         bottom: 0;
         z-index: 1;
         width: 100%;
         background-color: rgba(255, 93, 53, 0.7);
         overflow: hidden;
-// Hay que ponerle un height de "0" antes del estado de hover:
         height: 0%;
-// Propiedad que permite la transicion de height (o width) 
-// y el tiempo que toma la transicion:
         transition: height 0.8s;
         p {
-        margin: 10px 20px 0px 20px;
+        margin: 10px 10px 0px 10px;
         color: white;
         font-family: "IBM Plex Mono", monospace;
         font-size: 14px;
@@ -100,54 +218,7 @@ header {
         } 
     }
 }
-@media (max-width: 790px) {
-    .desktop-menu {
-        display: none;
-    }
-    .heroe-img {
-        display: block;
-        img {
-            width: 100%;
-        }
-    }
-    .carrousel {
-        display: none;
-    }
-
-    header .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 90%;
-        height: 40px;
-        background-color: #FA7855;
-        border-radius: 30px;
-        position: relative;
-        color: white;
-        &:hover {
-            .dropdown-mobile {
-                display: block;
-            }
-        }
-    }  
-}
-
-.dropdown-mobile {
-    display: none;
-    width: 50%;
-    position: absolute;
-    top: 100%;
-    background-color: #FA7855;
-    min-width: 160px;
-    padding: 12px 16px;
-    z-index: 1;
-    color: white;
-}
-
-
-// PAULINA
-
+// POSTS DE RECETAS: PAULINA
 .receta {
     margin-left: 10%;
     padding: 30px 0;
@@ -214,7 +285,6 @@ header {
     }
 }
 
-
 @media (max-width: 790px) {
     .receta {
         width: 90%;
@@ -245,16 +315,7 @@ header {
     }    
 }
 
-.post-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: gray;
-}
-
-// Paula
-
-
+// "PLATOS/RECETAS/EXOTICOS": PAULA
 .imagenes {
     width: 100%;
     display: flex;
@@ -307,7 +368,7 @@ header {
   
 }
 
-
+// FOOTER: PAULA
 footer {
     display: flex;
     justify-content: center;
@@ -411,6 +472,7 @@ a {
         margin-left:7px;
     }
 }
+
 
 
 // RECETAS.HTML
@@ -592,3 +654,28 @@ a {
         }
     }
 }
+
+
+@media (max-width: 790px) {
+    header {
+        .desktop-menu {
+            display: none;
+        }
+        .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .heroe-img {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    .carrousel {
+        display: none;
+    }
+ }
+
