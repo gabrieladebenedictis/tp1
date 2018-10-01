@@ -194,7 +194,7 @@ header {
         font-size: 12px;
     }
     .leer-mas {
-        width: 25%;
+        width: 70px;
         text-align: center;
         font-weight: bold;
         padding: 6px 18px;
@@ -207,7 +207,6 @@ header {
             color: black;
         }
         transition: background-color 0.3s ease-in-out;
-    // transicion de background-color en el hover
         &:hover {
             background-color: #fc784f;
             cursor: pointer;
@@ -238,7 +237,6 @@ header {
             text-align: center;
             .leer-mas {
                 margin: 0 auto;
-                width:30%;
             }
         }
         &:first-of-type {
@@ -455,20 +453,20 @@ a {
 .post-receta {
     font-family: "IBM Plex Mono", monospace;
     width: 40%;
-    margin: 0 auto;
+    margin: 30px auto 60px;
     .img-social-container {
-        margin: 30px 0;
         position: relative;
         .iconos {
             position: absolute;
-            top: 100px;
+            top: 50%;
             left: -50px;
+            transform: translateY(-50%);      
             display: flex;
             flex-direction: column;
             color:white;
             text-align: center;
             margin-right: 10px;
-            .facebook  {
+            .facebook-r  {
                 background-color:#3b5998;
                 border-radius: 100%;
                 width: 18px;
@@ -477,7 +475,7 @@ a {
               
               }
               
-              .twitter {
+              .twitter-r {
                  background-color:#55acee;
                  border-radius: 100%;
                  margin-top:10px;
@@ -486,7 +484,7 @@ a {
                  padding: 2px;
               }
               
-              .google {
+              .google-r {
                  background-color:#dd4b39;
                  border-radius: 100%;
                  margin-top:10px;
@@ -495,7 +493,7 @@ a {
                  padding: 2px;
               }
               
-              .instagram {
+              .instagram-r {
                  background-color:#8f6247;
                  border-radius: 100%;
                  margin-top:10px;
@@ -504,7 +502,7 @@ a {
                  padding: 2px;
               }
               
-              .pinterest {
+              .pinterest-r {
                  background-color:#cb2027;
                  border-radius: 100%;
                  margin-top:10px;
@@ -558,4 +556,39 @@ a {
            }
         }
     }   
+}
+
+@media (max-width: 790px) {
+    .post-receta {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb {
+        ul {
+        flex-wrap: wrap;
+        padding: 0;
+        li:last-of-type {
+            width: 100%;
+            margin-top: 15px;
+        }
+        }
+    }
+    .post-receta {
+        width: 90%;
+        .img-social-container {
+            .iconos {
+                position: relative;
+                flex-direction: row;
+                justify-content: space-around;
+                margin: 0 auto;
+                top: -10px;
+                left: 0;
+                .facebook-r {
+                    margin-top: 10px;
+                }
+                }
+        }
+    }
 }
