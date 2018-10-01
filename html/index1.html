@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Mi Blog de Cocina</title>
     <meta name='viewport' content='width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
+
 <body>
     <header>
+        <!-- TODAS -->
         <h1>MI BLOG DE COCINA</h1>
-        <nav class="mobile-menu">
-            <ul class="dropdown-mobile">
-                <li>HOME</li>
-                <li>PLATOS</li>
-                <li>SOBRE MI</li>
-                <li>CONTACTO</li>
-            </ul>
-        </nav>
         <nav class="desktop-menu">
-            <ul>
+            <ul class="main-list">
                 <li><a href="html/index1.html">HOME</a></li>
                 <li class="dropdown">PLATOS <i class="fas fa-sort-down"></i>
                     <ul class="hide">
@@ -43,10 +30,24 @@
                 <li>CONTACTO</li>
             </ul>
         </nav>
+        <!-- MENU MOBILE: MARIA -->
+        <nav class="mobile-menu">
+            <div>
+                <i class="fas fa-bars"></i>
+                <span>MENU</span>
+            </div>
+            <ul class="dropdown-mobile">
+                <li>HOME</li>
+                <li>PLATOS</li>
+                <li>SOBRE MI</li>
+                <li>CONTACTO</li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <!-- MARIA -->
         <section class="heroe-img">
-            <img src="../img/img-1.jpg"/>
+            <img src="../img/img-1.jpg" />
         </section>
         <section class="carrousel">
             <div class="image-container">
@@ -60,7 +61,7 @@
                 <img src="../img/img-2.jpg">
                 <div>
                     <p>Mayo 20, 2018 | 5 comentarios</p>
-                    <p>"Delicioso plato de merluza en salsa de vinto tinto"</p>
+                    <p>"Delicioso plato de merluza"</p>
                 </div>
             </div>
             <div class="image-container">
@@ -77,33 +78,48 @@
                     <p>"Lo mejor de la dieta mediterránea"</p>
                 </div>
             </div>
-        </section> 
-
-        <section class="paula">
-                <div class="imagenes">
-
-                        <figure class="image2">
-                             <img src="../img/platos.jpeg"/>
-                             <p class="tipos">PLATOS</p>
-                        </figure>
-                
-                        <figure class="image2">
-                            <img src="../img/recetas.JPG"/>
-                            <p class="tipos">RECETAS</p>
-                        </figure>
-                
-                        <figure class="image2">
-                            <img src="../img/exoticos.JPG"/>
-                            <p class="tipos">EXOTICOS</p>
-                        </figure>
-                
-                    </div>
         </section>
-                
-        <section class="gabi">
-
+        <!-- PAULA: -->
+        <section class="imagenes">
+            <figure class="image2">
+                    <img src="../img/platos.jpeg"/>
+                    <p class="tipos">PLATOS</p>
+            </figure>
+    
+            <figure class="image2">
+                <img src="../img/recetas.JPG"/>
+                <p class="tipos">RECETAS</p>
+            </figure>
+    
+            <figure class="image2">
+                <img src="../img/exoticos.JPG"/>
+                <p class="tipos">EXOTICOS</p>
+            </figure>
         </section>
-        <section class="paulina">
+        <!-- GABRIELA: -->
+        <section class="profile">
+            <div class="contenedor-video">
+                <iframe src="https://www.youtube.com/embed/-jiw2UGwP3A" frameborder="0" allow="autoplay; encrypted-media"
+                    allowfullscreen></iframe>
+                <figcaption>Septiembre 28, 2016 | El ingrediente secreto en las hamburguesas</figcaption>
+            </div>
+            <div class="contenedor-profile">
+                <div class="rosa">
+                    <h2>SOBRE MI</h2>
+                </div>
+                <div class="img-round">
+                    <img src="../img/gabi.jpg">
+                </div>
+                <h3>GABI</h3>
+                <p>Tengo 28 años, estudie un año de cocina en el EAG
+                    Me gusta mucho cocinar y poder trasportar con los sabores a otro luga.</p>
+                <div class="rosa">
+                    <h2>NEWSLETTER</h2>
+                </div>
+            </div>
+        </section>
+        <section>
+                <!-- PAULINA -->
             <div class="receta">
                 <div class="img-container">
                     <img src="../img/nota1.JPG" alt="">
@@ -114,81 +130,83 @@
                             <span>By Maria |</span>
                             <span>Mayo 19, 2017</span>
                         </div>
-                        <div>
+                        <div class="feedback">
                             <span><i class="far fa-heart"></i>20</span>
                             <span><i class="far fa-comments"></i>10</span>
                             <span><i class="fas fa-share-alt"></i></span>
                         </div>
-                    </div>
+                </div>
                     <h4>Delicias dulces</h4>
                     <p>En este articulo van a poder ver una receta muy simple, sana y muy rica!</p>
                     <div class="leer-mas"><span>Leer mas</span></div>
                 </div>
             </div>
-            <div class="receta">
-                <div class="img-container">
-                    <img src="../img/nota2.JPG" alt="">
-                </div>
-                <div class="post-recetas-container">
-                    <div class="post-info">
-                        <div>
-                            <span>By Maria |</span>
-                            <span>Mayo 19, 2017</span>
-                        </div>
-                        <div>
-                            <span><i class="far fa-heart"></i>20</span>
-                            <span><i class="far fa-comments"></i>10</span>
-                            <span><i class="fas fa-share-alt"></i></span>
-                        </div>
+                <div class="receta">
+                    <div class="img-container">
+                        <img src="../img/nota2.JPG" alt="">
                     </div>
-                    <h4>Comidas simples</h4>
-                    <p>En este articulo van a poder ver una receta muy simple, sana y muy rica!</p>
-                    <div class="leer-mas"><span>Leer mas</span></div>
+                    <div class="post-recetas-container">
+                        <div class="post-info">
+                            <div>
+                                <span>By Maria |</span>
+                                <span>Mayo 19, 2017</span>
+                            </div>
+                            <div class="feedback">
+                                <span><i class="far fa-heart"></i>43</span>
+                                <span><i class="far fa-comments"></i>70</span>
+                                <span><i class="fas fa-share-alt"></i></span>
+                            </div>
+                        </div>
+                        <h4>Comidas simples</h4>
+                        <p>En este articulo van a poder ver una receta muy simple, sana y muy rica!</p>
+                        <div class="leer-mas"><a href="#"><span>Leer mas</span></a></div>
+                    </div>
                 </div>
-                </div>
+            </div>
         </section>
     </main> 
-    
+    <!-- PAULA -->
     <footer>
-                    <div class="redes-sociales">
-                         <a href="https://www.facebook.com/">
-                             <div class="facebook">
-                                  <i class="fab fa-facebook-square"></i>
-                                  <p class="redes">FACEBOOK</p>   
-                             </div>
-                         </a>
-                         <a href="https://twitter.com/">
-                             <div class="twitter">
-                                 <i class="fab fa-twitter"></i>
-                                 <p>TWITTER</p>
-                             </div>    
-                         </a>
-                         <a href="https://www.google.com.ar/?gws_rd=ssl">
-                             <div class="google">
-                                 <i class="fab fa-google-plus-g"></i>
-                                 <p>GOOGLE+</p>
-                             </div>
-                         </a>
-                         <a href="https://ar.linkedin.com/">
-                             <div class="linkedin">
-                                 <i class="fab fa-linkedin"></i>
-                                 <p>LINKEDIN</p>
-                             </div>
-                         </a>
-                         <a href="https://www.instagram.com/?hl=es">
-                             <div class="instagram">
-                                 <i class="fab fa-instagram"></i>
-                                 <p>INSTAGRAM</p>
-                             </div>
-                         </a>
-                         <a href="https://www.youtube.com/?gl=AR&hl=es-419">
-                             <div class="youtube">
-                                 <i class="fab fa-youtube"></i>
-                                 <p>YOUTUBE</p>
-                             </div>
-                         </a>
-                     </div>
+        <div class="redes-sociales">
+                <a href="https://www.facebook.com/">
+                    <div class="facebook">
+                        <i class="fab fa-facebook-square"></i>
+                        <p class="redes">FACEBOOK</p>   
+                    </div>
+                </a>
+                <a href="https://twitter.com/">
+                    <div class="twitter">
+                        <i class="fab fa-twitter"></i>
+                        <p>TWITTER</p>
+                    </div>    
+                </a>
+                <a href="https://www.google.com.ar/?gws_rd=ssl">
+                    <div class="google">
+                        <i class="fab fa-google-plus-g"></i>
+                        <p>GOOGLE+</p>
+                    </div>
+                </a>
+                <a href="https://ar.linkedin.com/">
+                    <div class="linkedin">
+                        <i class="fab fa-linkedin"></i>
+                        <p>LINKEDIN</p>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/?hl=es">
+                    <div class="instagram">
+                        <i class="fab fa-instagram"></i>
+                        <p>INSTAGRAM</p>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/?gl=AR&hl=es-419">
+                    <div class="youtube">
+                        <i class="fab fa-youtube"></i>
+                        <p>YOUTUBE</p>
+                    </div>
+                </a>
+            </div>
 
-    </footer>   
+    </footer>
 </body>
+
 </html>
