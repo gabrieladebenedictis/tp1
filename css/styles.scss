@@ -320,7 +320,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-       
+    
 }
 
 .image2:hover {
@@ -331,25 +331,12 @@ header {
 }
 
 
-// .image12 {
-//     margin-right: 2px;
-//     margin-left: 2px;
-//     &:hover {
-//     cursor: pointer;
-//     p {
-//         background-color:#fc784f;
-//     }
-// }
-
-
 .imagenes img {
     width: 300px;
     height: auto;
     border-radius: 20%;
-    // margin-left: 10px;
-    // margin-top: 10px;
-    // CAMBIE EL WIDTH 
 }
+
 
 
 .tipos {
@@ -365,7 +352,13 @@ header {
     background-color:white;
     position:relative;
     bottom: 118px;
-    // CAMBIE EL BOTTOM
+    
+}
+
+.link-receta {
+    p { 
+        color:black;
+    }
 }
 
 // FOOTER: PAULA
@@ -473,6 +466,9 @@ a {
     }
 }
 
+.flechita {
+    display: none;
+ }
 
 
 // RECETAS.HTML
@@ -677,5 +673,36 @@ a {
     .carrousel {
         display: none;
     }
- }
+ 
+// PAULA 
 
+ .imagenes {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
+        
+        
+        .flechita {
+           display:block;  
+           position: relative;
+           a {
+               position: absolute;
+               right: 123px;
+               top:23px;
+               background-color: orangered;
+               border-radius: 50%;
+               .fa-arrow-up {
+                   padding: 8px;
+                   color:white;
+               }
+           }
+        }
+        
+        .redes-sociales {
+           padding: 25px;
+           p {
+               display: none;
+           }
+        }
+    }

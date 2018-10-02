@@ -340,6 +340,10 @@ header .mobile-menu .dropdown-mobile {
   bottom: 118px;
 }
 
+.link-receta p {
+  color: black;
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -437,6 +441,10 @@ a {
 }
 .youtube p {
   margin-left: 7px;
+}
+
+.flechita {
+  display: none;
 }
 
 .banner img {
@@ -618,6 +626,35 @@ a {
   }
 
   .carrousel {
+    display: none;
+  }
+
+  .imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flechita {
+    display: block;
+    position: relative;
+  }
+  .flechita a {
+    position: absolute;
+    right: 123px;
+    top: 23px;
+    background-color: orangered;
+    border-radius: 50%;
+  }
+  .flechita a .fa-arrow-up {
+    padding: 8px;
+    color: white;
+  }
+
+  .redes-sociales {
+    padding: 25px;
+  }
+  .redes-sociales p {
     display: none;
   }
 }
