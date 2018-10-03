@@ -1,26 +1,39 @@
-body {
-  margin: 0%;
-}
-//HEADER: TODAS
-header {
+//MARIA
+@mixin flexColumnAlignCenter {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@mixin marginBorderRedes {
+    border-radius: 100%;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+}
+$colorNaranja: #FA7855;
+$rosa: #fde2da;
+body {
+    margin: 0%;
+}
+// MENUS Y HEADER:TODAS
+header {
+    @include flexColumnAlignCenter;
+    margin-bottom: 15px;
     h1 {
         font-family: "Indie Flower", cursive;
-        color: #FA7855;
+        color: $colorNaranja;
     }
     .desktop-menu {
         width: 42%;
         display: block;
     }
-    // MENU MOBILE: MARIA
+    //MOBILE: MARIA
     .mobile-menu {
         display: none;
         position: relative;
         width: 80%;
-        height: 40px;
-        background-color: #FA7855;
+        height: 50px;
+        background-color: $colorNaranja;
         border-radius: 30px;
         color: white;
         font-family: "IBM Plex Mono", monospace;
@@ -40,11 +53,10 @@ header {
             text-align: center;
             margin: 0px;
             padding: 0%;
-            background-color: #FA7855;
+            background-color: $colorNaranja;
         }
     }
 }
-// MENU DESKTOP: TODAS
 .main-list {
     display: flex;
     list-style: none;
@@ -53,12 +65,12 @@ header {
     font-family: "IBM Plex Mono", monospace;
     color: gray;
     li:hover {
-        color: #FA7855;
+        color: $colorNaranja;
         cursor: pointer;
     }
     a {
         text-decoration: none; 
-        color: #FA7855;             
+        color: $colorNaranja;             
     }
     .dropdown {
         position: relative;
@@ -78,121 +90,25 @@ header {
             list-style: none;
         }
     }
-    &:hover .hide {
-      display: block;
-    }
-    a {
-      text-decoration: none;
-      color: #fa7855;
-    }
-    .hide {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      padding: 12px 16px;
-      z-index: 1;
-    }
 }
-
 // CARROUSEL: MARIA
 .heroe-img {
     display: none;
 }
 .carrousel {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0px 10px 0px;
-}
-.image-container {
-  position: relative;
-  width: 24%;
-  img {
-    width: 100%;
-  }
-  div {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    width: 100%;
-    height: 22%;
-    background-color: rgba(255, 93, 53, 0.5);
-    p {
-      margin: 10px 8px 0px 8px;
-      text-align: justify;
-      color: white;
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 14px;
-      &:first-of-type {
-        font-size: 10px;
-        // margin-top: 10px;
-      }
-    }
-  }
-  // &:hover {
-  //     display: inline-block;
-  //     cursor: pointer;
-  // }
-}
-.profile {
-  display: flex;
-  justify-content: space-around;
-  width: 80%;
-  margin: auto;
-}
-.contenedor-video {
-  width: 50%;
-  height: 500px;
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
-  figcaption {
-    color: grey;
-  }
-}
-.contenedor-profile {
-  width: 23%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  font-family: "IBM Plex Mono", monospace;
-  .rosa {
-    width: 100%;
-    height: 50px;
-    background-color: #fde2da;
-    font-size: 15px;
-    margin: 0;
-    text-align: center;
-    h2 {
-      font-size: 18px;
-    }
-  }
-  .img-round {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-      border-radius: 50%;
-    }
-  }
+    justify-content: space-between;
+    margin: 0;
+    // TIENE QUE LLEVAR MARGIN: 0; SI NO, SE ROMPEEE
 }
-//     width: 100%;
-//     display: flex;
-//     justify-content: space-between;
-//     margin: 0;
-// }
 .image-container {
     position: relative;
     width: 24%;
     &:hover {
         cursor: pointer;
         div {
-            height: 22%;
+            height: 28%;
         }
     }
     img {
@@ -208,7 +124,7 @@ header {
         height: 0%;
         transition: height 0.8s;
         p {
-        margin: 10px 10px 0px 10px;
+        margin: 10px 20px 0px 20px;
         color: white;
         font-family: "IBM Plex Mono", monospace;
         font-size: 14px;
@@ -218,41 +134,159 @@ header {
         } 
     }
 }
-// POSTS DE RECETAS: PAULINA
-.receta {
-    margin-left: 10%;
-    padding: 30px 0;
-    width: 50%;
-    border-top: 1px solid lightgray;
+// PLATOS/RECETAS/EXOTICOS: PAULA Y MARIA
+.imagenes {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    .img-container {
-        width: 45%;
-        display: flex;
-        align-items: center;
-        img {
-            width: 100%;
-            border-radius: 45px;
+    justify-content: space-around;
+}
+.link-receta {
+    width: 24%;
+    @include flexColumnAlignCenter;
+    justify-content: center;
+    figure {
+        width: 100%;
+        p { 
+            color: black;
+            margin: 0%;
+            font-size: 12px;
         }
     }
-    .post-recetas-container {
+}
+.image2 {
+    margin: 40px 0px 40px 0px;
+    width: 24%;
+    @include flexColumnAlignCenter;
+    justify-content: center;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+        div {
+            background-color: $colorNaranja;
+        }
+    }
+    &:first-of-type {
+        margin-left: 5%;
+    }
+    &:last-of-type {
+        margin-right: 5%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 20%;
+    }
+    div {
+        z-index: 1;
+        position: absolute;
+        @include flexColumnAlignCenter;
+        justify-content: center;
+        margin: auto;
+        border-radius: 20px;
+        background-color:white;
         width: 50%;
-    }
-}
-
-.post-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 11px;
-    color: gray;
-    text-align: center;
-    .feedback {
-        span {
-            padding-right: 6px;
+        height: 17%;
+        p {
+            margin: 0%;
+            font-family: "IBM Plex Mono", monospace;
+            font-size: 12px;
         }
     }
 }
 
+//VIDEO Y PERFIL: GABRIELA
+.profile {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+}
+.contenedor-video {
+    width: 50%;
+    height: 500px;
+    margin-left: 5%;
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+    figcaption {
+        color: grey;
+    }
+}
+.contenedor-profile {
+    margin-right: 5%;
+    width: 23%;
+    @include flexColumnAlignCenter;
+    justify-content: space-between;
+    font-family: "IBM Plex Mono", monospace;
+    h3 {
+        margin: 0;
+    }
+    p {
+        margin: 0%;
+        text-align: justify;
+    }
+    .rosa {
+        width: 100%;
+        height: 50px;
+        background-color: $rosa;
+        font-size: 15px;
+        margin: 0;
+        text-align: center;
+        h2 {
+        font-size: 18px;
+        }
+    }
+    .img-round {
+        width: 100%;
+        @include flexColumnAlignCenter;
+        img {
+        border-radius: 50%;
+        }
+    }
+}
+// POSTS DE RECETAS: PAULINA
+.receta-container {
+   margin-top: 60px;
+}
+.receta {
+   margin-left: 10%;
+   padding: 30px 0;
+   width: 50%;
+   border-top: 1px solid lightgray;
+   display: flex;
+   justify-content: space-between;
+   .img-container {
+       width: 45%;
+       display: flex;
+       align-items: center;
+       img {
+           width: 100%;
+           border-radius: 45px;
+        }
+    }
+   .post-recetas-container {
+       width: 50%;
+    }
+}
+.post-info {
+   display: flex;
+   justify-content: space-between;
+   font-size: 11px;
+   color: gray;
+   text-align: center;
+   .feedback {
+       span {
+           padding-right: 6px;
+        }
+    }
+    a {
+       transition: color 0.2s ease-in-out;
+       &:hover {
+           color: $colorNaranja;
+        }
+    }
+}
 .post-recetas-container {
     font-family: "IBM Plex Mono", monospace;
     h4 {
@@ -260,7 +294,7 @@ header {
         font-size: 18px;
         margin: 15px 0 0 15px;
     }
-    p   {
+    p {
         color: grey;
         font-size: 12px;
     }
@@ -271,27 +305,235 @@ header {
         padding: 6px 18px;
         border-radius: 9px;
         font-size: 11px;
-        background-color: #fde2da;
+        background-color: $rosa;
         margin: 40px 0 0 0;
         a {
             text-decoration: none;
             color: black;
         }
+        //A QUE CLASE PERTENECE
         transition: background-color 0.3s ease-in-out;
         &:hover {
-            background-color: #fc784f;
+            background-color: $colorNaranja;
             cursor: pointer;
         }
     }
 }
-
-@media (max-width: 790px) {
-    .receta {
-        width: 90%;
-        margin: 0 auto;
+// FOOTER: PAULA
+footer {
+    display: flex;
+    justify-content: center;
+    .redes-sociales {
+    width: 70%;
+    font-family: "IBM Plex Mono", monospace;
+    color:grey;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+    }
+}
+a {
+    color:grey;
+    text-decoration: none;
+}
+.facebook {
+    display: flex;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+        color:#3b5998;
+    }
+    p {
+        margin-left:7px;
+    }
+}
+.twitter {
+    display: flex;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+        color:#55acee;
+    }
+    p {
+        margin-left:7px;
+    }
+}
+.google {
+    display: flex;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+        color:#dd4b39;
+    }
+    p {
+        margin-left:7px;
+    }
+}
+.linkedin {
+    display: flex;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+        color:#007bb5;
+    }
+    p {
+        margin-left:7px;
+    }
+}
+.instagram {
+    display: flex;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+        color:#8f6247;
+    }
+    p {
+        margin-left:7px;
+    }
+}
+.youtube {
+    display: flex;
+    align-items: center;
+    &:hover {
+        cursor: pointer;
+        color:#ff0000;
+    }
+    p {
+        margin-left:7px;
+    }
+}
+.flechita .fa-arrow-up {
+    display: none;
+}
+//RECETA.HTML: PAULA Y PAULINA
+.banner {
+    img {
+        width: 100%;
+    }
+}
+.breadcrumb {
+    margin-left: 5%;
+    ul {
+        list-style-type: none;
+        display: flex;
+    }
+}
+.breadcrumb li {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+            color: $colorNaranja;
+        }
+    }
+    i {
+        padding-right: 9px;
+    }
+    &::after {
+        content: '>';
+        padding: 0 6px;
+    }
+    &:last-of-type a {
+        font-weight: normal;
+    }
+    &:last-of-type::after {
+        content: '';
+    }
+}
+ .post-receta {
+    font-family: "IBM Plex Mono", monospace;
+    width: 40%;
+    margin: 30px auto 60px;
+}
+.img-social-container {
+    position: relative;
+    .iconos {
+        position: absolute;
+        top: 50%;
+        left: -50px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        color:white;
+        text-align: center;
+        margin-right: 10px;
+        .facebook-r {
+            background-color:#3b5998;
+            @include marginBorderRedes;
+        }
+        .twitter-r {
+            background-color:#55acee;
+            margin-top:10px;
+            @include marginBorderRedes;
+        }
+        .google-r {
+            background-color:#dd4b39;
+            margin-top:10px;
+            @include marginBorderRedes;
+        }
+        .instagram-r {
+            background-color:#8f6247;
+            margin-top:10px;
+            @include marginBorderRedes;
+        }
+        .pinterest-r {
+            background-color:#cb2027;
+            margin-top:10px;
+            @include marginBorderRedes;
+        }
+    }
+    .img-container {
+        img {
+            width: 100%;
+            border-radius: 50px;
+        }
+    }
+}
+.descripcion-receta {
+    h4 {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 15px 0 0 15px;
+    }
+    p {
+        color: grey;
+        font-size: 12px;
+    }
+    .cita {
+        padding-left: 30px;
+        border-left: 1px solid $colorNaranja;
+        p {
+            color: black;
+            font-weight: bold;
+        }
+        span {
+            color: gray;
+            font-size: 12px;
+        }
+    }
+}
+.ingredientes {
+    li {
+        display: block;
+        color: gray;
+        font-size: 12px;
+        line-height: 18px;
+        &::before {
+            content: '•';
+            color: $colorNaranja;
+            padding-right: 15px;
+        }
     }
 }
 
+// MEDIAQUERIES: TODAS
 @media (max-width: 375px) {
     .receta {
         display: none;
@@ -312,329 +554,10 @@ header {
         &:first-of-type {
             display: block;
         }
-    }    
-}
-
-// "PLATOS/RECETAS/EXOTICOS": PAULA
-.imagenes {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    
-}
-
-.image2 {
-    width: 22%;
-    margin: 0 5%;
-    position: relative;
-    img {
-        width: 100%;
-        height: auto;
-        border-radius: 20%;
     }
 }
-
-.image2:hover {
-    cursor: pointer;
-    p {
-        background-color:#fc784f;
-    }
-}
-
-.tipos {
-    width:50%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    line-height: 34px;
-    border-radius: 20px;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 13px;
-    background-color:white;
-    position:absolute;
-    top: 41%;
-    left: 25%;
-    
-}
-
-.link-receta {
-    width: 24%;
-    display: flex;
-    justify-content: center;
-    p { 
-        color:black;
-        width: 52%;
-    }
-    figure {
-        width: 100%;
-    }
-}
-
-// FOOTER: PAULA
-footer {
-    display: flex;
-    justify-content: center;
-
-    .redes-sociales {
-    width: 70%;
-    font-family: "IBM Plex Mono", monospace;
-    color:grey;
-    font-size: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-bottom: 2px solid grey;
-    margin-bottom: 10px;
-       
-    }
-
-}
-
-a {
-    color:grey;
-    text-decoration: none;
-}
-
-.facebook {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    &:hover {
-        cursor: pointer;
-        color:#3b5998;
-    }
-    p {
-        margin-left:7px;
-    }
-}
-
-.twitter {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    &:hover {
-        cursor: pointer;
-        color:#55acee;
-    }
-    p {
-        margin-left:7px;
-    }
-}
-
-
-.google {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    &:hover {
-        cursor: pointer;
-        color:#dd4b39;
-    }
-    p {
-        margin-left:7px;
-    }
-}
-
-
-.linkedin {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    &:hover {
-        cursor: pointer;
-        color:#007bb5;
-    }
-    p {
-        margin-left:7px;
-    }
-}
-
-.instagram {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    &:hover {
-        cursor: pointer;
-        color:#8f6247;
-    }
-    p {
-        margin-left:7px;
-    }
-}
-
-.youtube {
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    &:hover {
-        cursor: pointer;
-        color:#ff0000;
-    }
-    p {
-        margin-left:7px;
-    }
-}
-
-.flechita {
-    display: none;
- }
-
-
-// RECETAS.HTML
-
-.banner {
-    img {
-        width: 100%;
-    }
-}
-
-.breadcrumb {
-    margin-left: 5%;
-    ul {
-        list-style-type: none;
-        display: flex;
-        li {
-            font-family: "IBM Plex Mono", monospace;
-            font-size: 12px;
-            a {
-                text-decoration: none;
-                color: black;
-                font-weight: bold;
-            }
-            i {
-                padding-right: 9px;
-            }
-            &::after {
-                content: '>';
-                padding: 0 6px;
-            } 
-            &:last-of-type a {
-                font-weight: normal;
-            }
-            &:last-of-type::after {
-                content: '';
-            }
-        }
-    }
-}
-.post-receta {
-    font-family: "IBM Plex Mono", monospace;
-    width: 40%;
-    margin: 30px auto 60px;
-    .img-social-container {
-        position: relative;
-        .iconos {
-            position: absolute;
-            top: 50%;
-            left: -50px;
-            transform: translateY(-50%);      
-            display: flex;
-            flex-direction: column;
-            color:white;
-            text-align: center;
-            margin-right: 10px;
-            .facebook-r  {
-                background-color:#3b5998;
-                border-radius: 100%;
-                width: 18px;
-                height: 18px;
-                padding: 2px;
-              
-              }
-              
-              .twitter-r {
-                 background-color:#55acee;
-                 border-radius: 100%;
-                 margin-top:10px;
-                 width: 18px;
-                 height: 18px;
-                 padding: 2px;
-              }
-              
-              .google-r {
-                 background-color:#dd4b39;
-                 border-radius: 100%;
-                 margin-top:10px;
-                 width: 18px;
-                 height: 18px;
-                 padding: 2px;
-              }
-              
-              .instagram-r {
-                 background-color:#8f6247;
-                 border-radius: 100%;
-                 margin-top:10px;
-                 width: 18px;
-                 height: 18px;
-                 padding: 2px;
-              }
-              
-              .pinterest-r {
-                 background-color:#cb2027;
-                 border-radius: 100%;
-                 margin-top:10px;
-                 width: 18px;
-                 height: 18px;
-                 padding: 2px;
-              }
-         }                 
-         
-        .img-container {
-            img {
-                width: 100%;
-                border-radius: 50px;
-            }
-        }
-    }   
-}
-
-.descripcion-receta {
-    h4 {
-        font-weight: bold;
-        font-size: 18px;
-        margin: 15px 0 0 15px;
-    }
-    p {
-        color: grey;
-        font-size: 12px;
-    }
-    .cita {
-        padding-left: 30px;
-        border-left: 1px solid #FA7855;
-        p {
-            color: black;
-            font-weight: bold;
-        }
-        span {
-            color: gray;
-            font-size: 12px;
-        }
-    }
-    .ingredientes  {
-        li {
-           display: block;
-           color: gray;
-           font-size: 12px;
-           line-height: 18px;
-           &::before {
-               content: '•';
-               color: #fc784f;
-               padding-right: 15px;
-           }
-        }
-    }   
-}
-
-@media (max-width: 790px) {
-    .post-receta {
-        width: 60%;
-    }
-}
-
 @media (max-width: 480px) {
-    .breadcrumb {
+   .breadcrumb {
         ul {
         flex-wrap: wrap;
         padding: 0;
@@ -646,35 +569,47 @@ a {
     }
     .post-receta {
         width: 90%;
-        .img-social-container {
-            .iconos {
-                position: relative;
-                flex-direction: row;
-                justify-content: space-around;
-                margin: 0 auto;
-                top: -10px;
-                left: 0;
-                .facebook-r {
-                    margin-top: 10px;
-                }
-                }
+    }
+    .img-social-container {
+        .iconos {
+            position: relative;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0 auto;
+            top: -10px;
+            left: 0;
+            .facebook-r {
+                margin-top: 10px;
+            }
         }
     }
 }
-
-
+@media (max-width: 700px) {
+    .contenedor-video {
+        display: none;
+    }
+    .contenedor-profile {
+        width: 100%;
+        .rosa {
+        width: 100%;
+        }
+        .img-round {
+        padding-top: 20px;
+        }
+    }
+}
 @media (max-width: 790px) {
+    // MENU
     header {
         .desktop-menu {
             display: none;
         }
         .mobile-menu {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flexColumnAlignCenter;
             justify-content: center;
         }
     }
+    // CARROUSEL
     .heroe-img {
         display: block;
         img {
@@ -684,57 +619,64 @@ a {
     .carrousel {
         display: none;
     }
- 
-// PAULA - Mobile 
-
- .imagenes {
-           width: 100%;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           
-           .image2 {
-               width: 90%;   
-           }
+    //PLATOS/RECETAS/EXOTICOS
+    .imagenes {
+        @include flexColumnAlignCenter;
+        margin: 30px 0;
+        .image2 {
+            width: 80%;
+            margin: 18px 0 18px 0;
+            p {
+                font-size: 20px;
+            }
         }
-        
-
-  .link-receta {
-      width: 100%;
-      margin-top: 18px;
-      margin-bottom: 18px;
-  }
-
-        .flechita {
-           display:block;  
-           position: absolute;
-           a {
-               position: absolute;
-               left: 50%;
-               margin-left: -13px;
-               top:23px;
-               background-color: orangered;
-               border-radius: 50%;
-               .fa-arrow-up {
-                   padding: 8px;
-                   color:white;
-               }
-           }
-        }
-        
-        .redes-sociales {
-           padding: 25px;
-           p {
-               display: none;
-           }
-        }
-
-        .tipos {
-            width: 50%;
-        }
-
-
-
     }
-
-   
+    .receta {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .link-receta {
+        width: 100%;
+        margin: 0;
+    }
+    //VIDEO
+    .contenedor-video {
+        display: none;
+    }
+    // FOOTER
+    footer {
+        position: relative;
+        p {
+            display: none;
+        }
+        .fa-youtube, .fa-facebook-square, .fa-twitter, .fa-instagram, .fa-linkedin, .fa-google-plus-g{
+            font-size: 24px;
+        }
+    }
+    .flechita {
+        @include flexColumnAlignCenter;
+        justify-content: center;
+        position: absolute;
+        background-color: $colorNaranja;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        top: 70%;
+        .fa-arrow-up {
+            display: block;
+            padding: 8px;
+            color:white;
+        }
+    }
+    .redes-sociales {
+        padding: 25px;
+        p {
+            display: none;
+        }
+    }
+    //RECETA
+    .receta {
+        width: 90%;
+        margin: 0 auto;
+    }
+}

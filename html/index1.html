@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,14 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
-<!-- AGREGAR EL LINK A LA RECETA -->
 <body>
     <header>
         <!-- TODAS -->
         <h1>MI BLOG DE COCINA</h1>
         <nav class="desktop-menu">
             <ul class="main-list">
-                <li><a href="html/index1.html">HOME</a></li>
+                <li><a href="index1.html">HOME</a></li>
                 <li class="dropdown">PLATOS <i class="fas fa-sort-down"></i>
                     <ul class="hide">
                         <li>Ensalada</li>
@@ -47,7 +45,7 @@
     <main>
         <!-- MARIA -->
         <section class="heroe-img">
-            <img src="../img/img-1.jpg" />
+            <img src="../img/img-1.jpg"/>
         </section>
         <section class="carrousel">
             <div class="image-container">
@@ -79,21 +77,27 @@
                 </div>
             </div>
         </section>
-        <!-- PAULA: -->
+        <!-- PAULA -->
         <section class="imagenes">
             <figure class="image2">
                     <img src="../img/platos.jpeg"/>
-                    <p class="tipos">PLATOS</p>
+                <div>
+                    <p>PLATOS</p>
+                </div>
             </figure>
-            <a class="link-receta" href ="receta.html">
-             <figure class="image2">
+            <a class="link-receta" href="receta.html">
+                <figure class="image2">
                     <img src="../img/recetas.JPG"/>
-                    <p class="tipos">RECETAS</p>
-             </figure>
+                    <div>
+                        <p>RECETAS</p>
+                    </div>
+                </figure>
             </a>
             <figure class="image2">
                     <img src="../img/exoticos.JPG"/>
-                    <p class="tipos">EXOTICOS</p>
+                <div>
+                    <p>EXOTICOS</p>
+                </div>
             </figure>
         </section>
         <!-- GABRIELA: -->
@@ -104,6 +108,7 @@
                 <figcaption>Septiembre 28, 2016 | El ingrediente secreto en las hamburguesas</figcaption>
             </div>
             <div class="contenedor-profile">
+<!-- AGRANDAR EN VERSION MOBILE -->
                 <div class="rosa">
                     <h2>SOBRE MI</h2>
                 </div>
@@ -111,15 +116,14 @@
                     <img src="../img/gabi.jpg">
                 </div>
                 <h3>GABI</h3>
-                <p>Tengo 28 años, estudie un año de cocina en el EAG
-                    Me gusta mucho cocinar y poder trasportar con los sabores a otro luga.</p>
+                <p>Tengo 28 años, estudie un año de cocina en el EAG. Me gusta mucho cocinar y poder trasportar con los sabores a otro lugar.</p>
                 <div class="rosa">
                     <h2>NEWSLETTER</h2>
                 </div>
             </div>
         </section>
-        <section>
-                <!-- PAULINA -->
+    <!-- PAULINA -->
+       <section class="receta-container">
             <div class="receta">
                 <div class="img-container">
                     <img src="../img/nota1.JPG" alt="">
@@ -127,13 +131,13 @@
                 <div class="post-recetas-container">
                     <div class="post-info">
                         <div>
-                            <span>By Maria |</span>
+                        <span>By <a href="#">Maria</a> |</span>
                             <span>Mayo 19, 2017</span>
                         </div>
                         <div class="feedback">
-                            <span><i class="far fa-heart"></i>20</span>
-                            <span><i class="far fa-comments"></i>10</span>
-                            <span><i class="fas fa-share-alt"></i></span>
+                        <span><a href="#"><i class="far fa-heart"></i>20</a></span>
+                        <span><a href="#"><i class="far fa-comments"></i>10</a></span>
+                        <span><a href="#"><i class="fas fa-share-alt"></i></a></span>
                         </div>
                 </div>
                     <h4>Delicias dulces</h4>
@@ -148,13 +152,13 @@
                     <div class="post-recetas-container">
                         <div class="post-info">
                             <div>
-                                <span>By Maria |</span>
+                            <span>By <a href="#">Maria</a> |</span>
                                 <span>Mayo 19, 2017</span>
                             </div>
                             <div class="feedback">
-                                <span><i class="far fa-heart"></i>43</span>
-                                <span><i class="far fa-comments"></i>70</span>
-                                <span><i class="fas fa-share-alt"></i></span>
+                            <span><a href="#"><i class="far fa-heart"></i>43</a></span>
+                            <span><a href="#"><i class="far fa-comments"></i>70</a></span>
+                            <span><a href="#"><i class="fas fa-share-alt"></i></a></span>
                             </div>
                         </div>
                         <h4>Comidas simples</h4>
@@ -204,15 +208,12 @@
                         <p>YOUTUBE</p>
                     </div>
                 </a>
-
-                <div class= "flechita">
-                    <a href="#"><i class="fas fa-arrow-up"></i>
-                    </a>
-                </div>
-                
             </div>
-
+            <div class= "flechita">
+                <a href="#">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
     </footer>
 </body>
-
 </html>
