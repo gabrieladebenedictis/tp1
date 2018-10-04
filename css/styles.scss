@@ -116,6 +116,9 @@ header {
     }
     div {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         bottom: 0;
         z-index: 1;
         width: 100%;
@@ -130,6 +133,7 @@ header {
         font-size: 14px;
         &:first-of-type {
             font-size: 10px;
+            margin-top: 0%;
         }
         } 
     }
@@ -589,6 +593,7 @@ a {
         display: none;
     }
     .contenedor-profile {
+        margin-left: 5%;
         width: 100%;
         .rosa {
         width: 100%;
@@ -678,5 +683,15 @@ a {
     .receta {
         width: 90%;
         margin: 0 auto;
+    }
+}
+@media (max-width: 1000px) {
+    .image-container {
+        div {
+            p {
+            margin: 8px 20px 0px 20px;
+            font-size: 12px;
+            }
+        }
     }
 }

@@ -107,6 +107,9 @@ header .mobile-menu .dropdown-mobile {
 }
 .image-container div {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   bottom: 0;
   z-index: 1;
   width: 100%;
@@ -123,6 +126,7 @@ header .mobile-menu .dropdown-mobile {
 }
 .image-container div p:first-of-type {
   font-size: 10px;
+  margin-top: 0%;
 }
 
 .imagenes {
@@ -611,6 +615,7 @@ a {
   }
 
   .contenedor-profile {
+    margin-left: 5%;
     width: 100%;
   }
   .contenedor-profile .rosa {
@@ -708,6 +713,12 @@ a {
   .receta {
     width: 90%;
     margin: 0 auto;
+  }
+}
+@media (max-width: 1000px) {
+  .image-container div p {
+    margin: 8px 20px 0px 20px;
+    font-size: 12px;
   }
 }
 
